@@ -3,7 +3,7 @@ const mainTitle = document.querySelector(".tTitle");
 const contentContainer = document.querySelector(".content");
 const leftContent = document.querySelector(".left-content");
 const rightContent = document.querySelector(".right-content");
-const footerRollersWrapper = document.querySelector(".footer-roolers .wrapper");
+const footerRollersWrapper = document.querySelectorAll(".footer-roolers .footer-wrapper");
 const burgerBar = document.querySelector(".fa-bars ");
 const navContainer = document.querySelector(".navigation-links  ");
 
@@ -103,18 +103,21 @@ async function setFooter(data) {
         let k = ` <div class="item">
     <p>${i.content}</p>
   </div>`;
-        footerRollersWrapper.innerHTML += k;
+        footerRollersWrapper.forEach((item) => {
+            item.innerHTML += k;
+        })
+
 
 
     }
 
 }
 
-burgerBar.addEventListener('click',()=>{
-if(navContainer.style.display === "none"){
-    navContainer.style.display = "flex"
-   
-}else{
-    navContainer.style.display = "none"
-}
+burgerBar.addEventListener('click', () => {
+    if (navContainer.style.display === "none") {
+        navContainer.style.display = "flex"
+
+    } else {
+        navContainer.style.display = "none"
+    }
 });

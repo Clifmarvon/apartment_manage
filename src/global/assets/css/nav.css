@@ -1,0 +1,23 @@
+.navigation-pane {
+  background-color: var(--primary);
+  color: var(--text);
+  padding: 0.5rem;
+  .navigation-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      img {
+        height: calc((100 / var(--width-layout)) * 100vw);
+      }
+    }
+    .navigation-links {
+      display: flex;
+      gap: calc((50 / var(--width-layout)) * 100vw);
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+}
+

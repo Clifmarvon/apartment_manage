@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap");
+
+:root {
+  /* ==LAYOUTS== */
+  --width-layout: 1336;
+  --height-layout: 998;
+
+  /* ==COLORS== */
+  --primary: #2a9d8f;
+  --background: #f4f4f9;
+  --text: #333333;
+  --accent: #e76f51;
+  --secondary: #264653;
+  --disable: #a8a8a8;
+  --success: #2a9d8f;
+  --danger: #e63946;
+  --warning: #f4a261;
+}
+
+* {
+ 
+  list-style: none;
+}
+
+body {
+   font-family: "Gabarito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc((20 / var(--width-layout)) * 100vw);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.site{
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns:minmax(0,1fr) ;
+}
+
+.button-success {
+  background-color: var(--success);
+  color: var(--background);
+}
+
+.button-danger {
+  background-color: var(--danger);
+  color: var(--background);
+}
+
+.button-warning {
+  background-color: var(--warning);
+  color: var(--text);
+}
+
+.button-disabled {
+  background-color: var(--disable);
+  color: var(--text);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: calc((10 / var(--height-layout)) * 100vw)
+    calc((20 / var(--width-layout)) * 100vw);
+  border-radius: calc((5 / var(--height-layout)) * 100vw);
+}

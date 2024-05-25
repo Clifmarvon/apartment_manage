@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+:root {
+  /* ==LAYOUTS== */
+  --width-layout: 1336;
+  --height-layout: 998;
+
+  /* ==COLORS== */
+  --primary: #2a9d8f;
+  --background: #f4f4f9;
+  --text: #333333;
+  --accent: #e76f51;
+  --secondary: #264653;
+  --disable: #a8a8a8;
+  --success: #2a9d8f;
+  --danger: #e63946;
+  --warning: #f4a261;
+}
+
+.site {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  user-select: none;
+  overflow: hidden;
+  background: linear-gradient(#582222, #160a0a);
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.landing-page-nav {
+  background-color: unset;
+  color: var(--background);
+  padding: 0.5rem;
+  .navigation-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      img {
+        filter: invert();
+        height: calc((50 / var(--width-layout)) * 100vw);
+      }
+    }
+    .navigation-links {
+        font-size: calc((30 / var(--width-layout)) * 100vw);
+      list-style: none;
+      display: flex;
+      gap: calc((50 / var(--width-layout)) * 100vw);
+      li {
+        cursor: pointer;
+      }
+    }
+    button{
+        font-size: calc((24 / var(--width-layout)) * 100vw);
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--background);
+  .tTitle {
+    display: inline-block;
+  }
+  h1 {
+    border-right: solid;
+    text-transform: uppercase;
+    letter-spacing: calc((10 / var(--width-layout)) * 100vw);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: calc((44 / var(--width-layout)) * 100vw);
+  }
+
+  .content {
+    gap: 2rem;
+    padding: 0 calc((140 / var(--width-layout)) * 100vw);
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .left-content {
+      display: flex;
+      flex-direction: column;
+      h2{
+        font-size: calc((44 / var(--width-layout)) * 100vw);
+      }
+      p {
+        font-family: "Major Mono Display", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: calc((16 / var(--width-layout)) * 100vw);
+      }
+      .gt-in {
+        font-size: calc((12 / var(--width-layout)) * 100vw);
+        padding-top: calc((10 / var(--height-layout)) * 100vw);
+        width: 80%;
+        align-self: center;
+      }
+    }
+    .right-content {
+      .wrapper {
+        img {
+          border-radius: calc((10 / var(--height-layout)) * 100vh);
+          width: calc((400 / var(--width-layout)) * 100vw);
+          height: calc((300 / var(--width-layout)) * 100vw);
+        }
+      }
+      .nav-points {
+        position: relative;
+        bottom: calc((40 / var(--width-layout)) * 100vw);
+        left: calc((15 / var(--width-layout)) * 100vw);
+        display: flex;
+        gap: calc((10 / var(--width-layout)) * 100vw);
+        .point {
+          border: none;
+          border-radius: 100%;
+          background-color: #d9d9d9;
+          width: calc((18 / var(--width-layout)) * 100vw);
+          height: calc((18 / var(--width-layout)) * 100vw);
+        }
+        .active {
+          background-color: var(--background);
+        }
+      }
+    }
+  }
+}
+
+.btn {
+   
+  font-family: "Krona One", sans-serif;
+  cursor: pointer;
+  border: none;
+  padding: calc((10 / var(--height-layout)) * 100vw)
+    calc((20 / var(--width-layout)) * 100vw);
+  border-radius: calc((5 / var(--height-layout)) * 100vw);
+}
+
+.footer-roolers {
+  width: 100vw;
+  margin-top: 3rem;
+  .wrapper {
+    overflow-x: scroll;
+
+    width: 100%;
+    display: inline-flex;
+
+    gap: 2rem;
+    color: var(--background);
+    .item {
+        font-size: calc((20 / var(--width-layout)) * 100vw);
+      border-radius:calc((10 / var(--height-layout)) * 100vh);
+      text-align: center;
+      padding: calc((14 / var(--width-layout)) * 100vw);
+      width: calc((100 / var(--width-layout)) * 100vw);
+      background-color: #a6a6a7ad;
+    }
+  }
+
+  .wrapper::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+}

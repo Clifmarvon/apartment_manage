@@ -1,0 +1,27 @@
+{
+  "main": [
+    {
+      "title": "Welcome to Apartment Hub",
+      "sub": [
+        {
+          "title": "SetUp",
+          "content": "Let's check and manage our apartments with the goodies.",
+          "button": "SetUp",
+          "class": "btn get-in"
+        },
+        {
+          "title": "Sub TitleK",
+          "content": "content",
+          "button": "Get Started",
+          "class": "btn get-in"
+        }
+      ]
+    }
+  ],
+  "other":[
+    "src/landing_page/assets/images/aprt.png",
+    "src/landing_page/assets/images/aprt2.png",
+    "src/landing_page/assets/images/aprt3.jpg"
+  ],
+  "contents": [{ "content": "make it", "action": "drench" }]
+}

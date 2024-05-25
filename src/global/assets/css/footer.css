@@ -1,0 +1,15 @@
+.footer {
+  background-color: var(--secondary);
+  padding: 1rem;
+  color: var(--text);
+
+  .footer-items {
+    .logo {
+      img {
+        height: calc((100 / var(--width-layout)) * 100vw);
+
+        filter: invert();
+      }
+    }
+  }
+}
